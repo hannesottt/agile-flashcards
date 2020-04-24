@@ -76,3 +76,29 @@ function getRandomInt(max) {
 }
 
 nextQuestion();
+
+function fillTable() {
+	const tableElem = document.querySelector('.allQuestionsTable');
+	for (let i = 0; i < data.length; i++) {
+		const element = data[i];
+		const tableRow = document.createElement('tr');
+		tableRow.innerHTML = `
+			<td>${element.question}</td>
+			<td>${element.answer}</td>`;
+		tableElem.appendChild(tableRow);
+	}
+}
+
+fillTable();
+
+function toggleTable() {
+	const tableContainer = document.querySelector('.table-container');
+	const btnShowAll = document.querySelector('.btnShowAll');
+	if (tableContainer.style.display == 'none') {
+		tableContainer.style.display = 'block';
+		btnShowAll.innerText = 'Peida kõiki';
+	} else {
+		tableContainer.style.display = 'none';
+		btnShowAll.innerText = 'Näita kõiki';
+	}
+}

@@ -1,10 +1,9 @@
 body {
-	background-color: #222;
+	background-color: #1B1E21;
 	color: white;
 }
 
 .row-main {
-	background-color: #333;
 	padding: 10px;
 	border-radius: 10px;
 	margin-top: 15px;
@@ -31,4 +30,8 @@ body {
 
 .row-buttons > * {
 	margin: 5px;
+}
+
+th {
+	color: white;
 }

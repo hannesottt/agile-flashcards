@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row-main">
+		<div class="row-main bg-dark">
 			<div class="row">
 				<div class="col-sm col-question">
 					<div class="question-text">
@@ -20,6 +20,24 @@
 			<div class="row row-buttons">
 				<button type="button" class="btn btn-primary btnShowAnswer" onclick="toggleAnswer()">Näita vastust</button>
 				<button type="button" class="btn btn-primary btnNext" onclick="nextQuestion()">Järgmine</button>
+				<button type="button" class="btn btn-primary btnShowAll" onclick="toggleTable()">Näita kõiki</button>
+			</div>
+		</div>
+		<div class="row-main bg-dark table-container" style="display: none">
+			<div class="row">
+				<div class="col-sm">
+					<table class="table table-dark">
+						<thead>
+							<tr>
+								<th scope="col">Küsimus</th>
+								<th scope="col">Vastus</th>
+							</tr>
+						</thead>
+						<tbody class="allQuestionsTable">
+
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
